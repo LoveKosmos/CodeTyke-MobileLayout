@@ -1,4 +1,5 @@
 @import '../../styles/utils/colors';
+@import '../../styles/utils/breakpoints';
 
 .submitButton{
   text-align: center;
@@ -14,4 +15,5 @@
   &--inactive{
     background-color: $elephant-paw;
   }
+  
 }

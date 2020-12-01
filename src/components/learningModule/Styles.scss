@@ -5,6 +5,9 @@
 .learningModule {
     &__header {
         text-align: center;
+        @media only screen and (max-width: $mobile){
+            text-align: left;
+        }
     }
 
     &__title {
@@ -12,11 +15,17 @@
         color: $morning-sky;
         font-weight: 600;
         font-size: 1.5em;
+        @media only screen and (max-width: $mobile){
+            text-align: left;
+        }
     }
 
     &__subHeader{
         @include subheader;
         min-height: 42px;
+        @media only screen and (max-width: $mobile){
+            display: none;
+        }
     }
   
     &__answerArea {
@@ -29,6 +38,9 @@
         @media only screen and (max-width: $tablet) {
             border-radius: unset;
         }
+        @media( max-width: $mobile){
+            background-color: transparent;
+        }
 
     }
 
@@ -37,12 +49,24 @@
         display: grid;
         grid-auto-flow: column;
         grid-gap: 10px;
+
+        @media (max-width: $mobile) {
+            display: flex;
+            flex-direction: column;
+            
+        }
     }
 
     &__submitButtonContainer {
         height: 50px;
         .submitButton {
             float: right;
+        }
+
+        @media (max-width: $mobile){
+            .submitButton {
+                float: none;
+            }
         }
     }
 }

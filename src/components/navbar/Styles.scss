@@ -1,6 +1,14 @@
+@import '../../styles/utils/breakpoints';
+
 #navbarContainer{
   height: 50px;
   background: black;
+
+  @media (max-width: $mobile){
+    display: flex;
+    justify-items: center;
+  }
+
 }
 
 #navbarContent{
@@ -20,5 +28,7 @@
     height: 30px;
     line-height: 40px;
     padding: 10px 15px;
+    
   }
+  
 }
